@@ -2,6 +2,9 @@
 Example package for bundling a C dependency as a Python Extension
 if it is not found.
 
+library will be linked if it can be, otherwise a copy of the library
+will be compiled as an Extension.
+
 This example is a Cython project, but it doesn't need to be.
 """
 
@@ -125,7 +128,7 @@ setup_args = dict(
     author = "Min Ragan-Kelley",
     author_email = "zeromq-dev@lists.zeromq.org",
     url = 'http://github.com/minrk/pybundled',
-    description = "Example for bundling a library",
+    description = "Example for bundling a C library as an extension if it isn't found",
     long_description = __doc__,
     license = "Public Domain",
     cmdclass = cmdclass,
