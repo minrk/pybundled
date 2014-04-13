@@ -42,6 +42,7 @@ class DetectBundled(build_ext):
         cc = self.compiler
         line()
         print("Checking for libbundled")
+        cc.output_dir = self.build_temp
         if cc.has_function("bundled_version", libraries=["bundled"]):
             print("Found libbundled")
             line()
