@@ -1,0 +1,9 @@
+*.pyc
+*.dylib
+*.o
+*.so
+*.pyo
+libbundled/test
+pybundled/*.c
+build
+dist
